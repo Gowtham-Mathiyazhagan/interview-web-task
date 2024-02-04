@@ -6,7 +6,11 @@
   font-family: "IBM Plex Sans", sans-serif !important;
   font-size: 16px;
 }
-
+.main-container{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
 .nav-section {
   display: flex;
   height: 72px;
@@ -147,15 +151,25 @@ i {
   width: 692px;
   border: 1px solid #e0e0e0;
 }
-.cards:hover{
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+.cards:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+/* size change */
 .cards.last {
   height: 542px;
 }
+.cards.noimg {
+  height: 340px;
+}
+/*  */
 .cards > *:not(:first-child) {
   margin: 15px;
 }
+/* size change */
+.cards.noimg > * {
+  margin: 15px;
+}
+/* */
 .topic {
   height: 4%;
 }
@@ -169,6 +183,11 @@ i {
   font-size: 1.6rem;
   font-weight: 700;
 }
+/* size change */
+.title-menu.noimg {
+  height: 30%;
+}
+/* */
 .title-menu :last-child {
   font-size: 1.5rem;
 }
@@ -186,6 +205,11 @@ i {
 .footer.last {
   height: 10%;
 }
+/* size change */
+.footer.lastnoimg {
+  height: 5%;
+}
+/* */
 .footer .child1 {
   display: flex;
   justify-content: space-between;
@@ -284,4 +308,44 @@ i {
 }
 .exclamation p i {
   padding-right: 5px;
+}
+
+/* Create account */
+.mail-box {
+  height: 513px;
+  width: 736px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  z-index: 110;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.mail-box .green-letter {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  color: #008a45;
+  background-color: #effff4;
+}
+/* Grid layout */
+.main-grid-layout {
+  display: grid;
+  grid-template-columns: 320px 320px;
+  grid-template-rows: 403px 403px;
+  gap: 20px;
+  padding: 30px;
+}
+.create-account h3{
+	font-weight: 700;
+}
+.create-account .name {
+  display: flex;
+  width: 100%;
+}
+.create-account input {
+  width: 100%;
+  padding: 15px;
 }
