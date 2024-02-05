@@ -65,7 +65,7 @@
       <!-- Mobile Img style -->
       <div class="moblie-join">
         <i class="bi bi-arrow-left-short"></i>
-        <button>Join Group</button>
+        <button id="login-btn">Join Group</button>
       </div>
       <!-- section3 for post and nav and location  -->
       <div class="post-section">
@@ -244,7 +244,7 @@
           Let's learn, share & inspire each other with our passion for
           computer engineering. Sign up now 🤘🏼 
         </div>
-        <i class="bi bi-x-circle-fill" onclick="closeBox()"></i>
+        <i class="bi bi-x-circle-fill" id="close" onclick="closeBox()""></i>
         <div class="main-grid-layout">
         <div class="create-account">
           <h3>Create Account</h3>
@@ -302,7 +302,7 @@
         <div class="mobile-create-account">
           <div class="mobile-head">
             <h3>Create Account</h3>
-            <i class="bi bi-x-circle-fill" onclick="closeBoxMobile()"></i>
+            <i class="bi bi-x-square-fill"  onclick="closeMobileBox()"></i>
           </div>
           <div class="mobile-name">
             <input type="text" placeholder="First Name" />
@@ -313,7 +313,7 @@
           <input type="text" placeholder="Create Password" />
           <div class="mobile-group">
           <button class="create-btn">Create Account</button>
-          <div>or, Sign In</div>
+          <div onclick="goLoginPage()">or, Sign In</div>
         </div>
     <div class="fb">
       <button><img src="./assets/fb icon.svg" alt="fb">Sign up with Facebook</button>
@@ -324,9 +324,31 @@
         </div>
     <p>By signing up, you agree to our Terms & conditions, Privacy policy</p>
       </div>
+      <!-- Sign in account for mobile responsive -->
+      <div class="mobile-mail-box login"  id="mobile-signin" >
+        <div class="mobile-create-account">
+          <div class="mobile-head">
+            <h3>Welcome back!</h3>
+            <i class="bi bi-x-square-fill" onclick="closeMobileBox()"></i>
+          </div>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <div class="mobile-group">
+          <button class="create-btn">Sign In</button>
+          <div onclick="goCreatePage()">or, Create Account</div>
+        </div>
+    <div class="fb">
+      <button><img src="./assets/fb icon.svg" alt="fb">Sign up with Facebook</button>
+    </div>
+    <div class="google">
+      <button><img src="./assets/google icon.svg" alt="google">Sign up with Google</button>
+    </div>
+        </div>
+   <div class="mobile-forget">Forget Password?</div>
+      </div>
       <!-- Write btn -->
 <div class="write-btn">
-  <button>
+  <button  id="write-btn">
     <i class="bi bi-pencil-fill"></i>
   </button>
 </div>

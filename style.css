@@ -14,10 +14,13 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  /* background: rgba(0, 0, 0, 0.7); */
   /* justify-content: center;
   align-items: center; */
-  z-index: 50;
+  z-index: 100;
+}
+button,img,input{
+  z-index: 10;
 }
 .main-container {
   height: 100%;
@@ -418,7 +421,7 @@ i {
   transform: translate(-50%, -50%);
 }
 .mail-box:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 .bi-x-circle-fill {
   position: absolute;
@@ -426,6 +429,9 @@ i {
   right: -15px;
   color: #bdbcbc;
   font-size: 1rem;
+}
+.bi-x-circle-fill:hover {
+  color: rgb(252, 113, 113);
 }
 .mail-box .green-letter {
   height: 1.875rem;
@@ -456,6 +462,9 @@ i {
   border: 1px solid #d9d9db;
   font-size: 1rem;
 }
+.create-account input:hover {
+  border: 1px solid #818181;
+}
 .create-account .create-btn {
   width: 100%;
   /* height: ; */
@@ -468,6 +477,9 @@ i {
   font-size: 1rem;
   font-weight: 500;
 }
+.create-account .create-btn:hover {
+  background-color: #054ad3;
+}
 .create-account .fb button {
   width: 100%;
   /* height: ; */
@@ -478,6 +490,9 @@ i {
   color: #000000;
   border: 1px solid #d9d9db;
   font-weight: 500;
+}
+.create-account .fb button:hover {
+  border: 1px solid #bbbbbc;
 }
 .create-account .fb button > img {
   padding: 0 0.625rem 0.1rem 0;
@@ -492,6 +507,9 @@ i {
   color: #000000;
   border: 1px solid #d9d9db;
   font-weight: 500;
+}
+.create-account .google button:hover {
+  border: 1px solid #bbbbbc;
 }
 .create-account .google button > img {
   padding: 0 0.625rem 0.1rem 0;
@@ -538,7 +556,7 @@ i {
 
 footer {
   text-align: center;
-  font-size: 10px;
+  font-size: 0.8rem;
 }
 /* write btn style */
 .write-btn {
@@ -562,15 +580,135 @@ footer {
 .write-btn button:hover {
   transform: scale(1.1);
 }
-/* login style for mobile */
-.mobile-mail-box{
-  
+/* Create account style for mobile */
+.mobile-mail-box {
+  display: none;
+  height: 420px;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 100;
+  position: fixed;
+  bottom: -520%;
+  /* bottom: 0; */
+  left: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px;
+  transition: 0.5s linear;
+}
+
+.mobile-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-head .bi-x-square-fill {
+  color: #000000;
+  font-size: 2rem;
+}
+.mobile-head h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.mobile-create-account .mobile-name {
+  display: flex;
+  width: 100%;
+}
+.mobile-create-account input {
+  width: 100%;
+  padding: 1.1rem;
+  border: 1px solid #d9d9db;
+  font-size: 1.5rem;
+}
+.mobile-create-account input:hover {
+  border: 1px solid #818181;
+}
+.mobile-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 10px;
+}
+.mobile-group > div {
+  cursor: pointer;
+}
+.mobile-group > div:hover {
+  color: #2f6ce5;
+}
+.mobile-group .create-btn {
+  width: 40%;
+  /* height: ; */
+  margin: 5px;
+  padding: 1rem 1.9rem;
+  border-radius: 20px;
+  background-color: #2f6ce5;
+  color: #ffffff;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.mobile-group .create-btn:hover {
+  background-color: #054ad3;
+}
+.mobile-group div {
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+.mobile-create-account .fb button {
+  width: 100%;
+  /* height: ; */
+  margin: 0.3125rem;
+  padding: 1rem 1.9rem;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #d9d9db;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.mobile-create-account .fb button:hover {
+  border: 1px solid #bbbbbc;
+}
+.mobile-create-account .fb button > img {
+  padding: 0 0.625rem 0.1rem 0;
+}
+.mobile-create-account .google button {
+  width: 100%;
+  /* height: ; */
+  margin: 5px;
+  padding: 1rem 1.9rem;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #d9d9db;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.mobile-create-account .google button:hover {
+  border: 1px solid #bbbbbc;
+}
+.mobile-create-account .google button > img {
+  padding: 0 0.625rem 0.1rem 0;
+}
+.mobile-mail-box p {
+  font-size: 1rem;
+  opacity: 0.8;
+  text-align: center;
+  line-height: 3.25rem;
+}
+/* Login mobile scetiom */
+.mobile-create-account.login {
+  display: none;
+}
+.mobile-forget {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-top: 10px;
 }
 /* Responsive design */
 @media only screen and (max-width: 1220px) {
-  body {
-    background-color: #008a45;
-  }
   .post-location {
     grid-template-columns: 592px 143px;
   }
@@ -578,9 +716,6 @@ footer {
 @media only screen and (max-width: 1120px) {
   html {
     font-size: 14px;
-  }
-  body {
-    background-color: #c46d03;
   }
   .title-img img {
     height: auto;
@@ -613,9 +748,6 @@ footer {
   html {
     font-size: 13px;
   }
-  body {
-    background-color: #6003c4;
-  }
   .post-location {
     grid-template-columns: 452px 190px;
     grid-gap: 150px;
@@ -644,9 +776,7 @@ footer {
   html {
     font-size: 12px;
   }
-  body {
-    background-color: #c40320;
-  }
+
   .post-location {
     grid-template-columns: 450px 200px;
     grid-gap: 95px;
@@ -669,9 +799,6 @@ footer {
   html {
     font-size: 11px;
   }
-  body {
-    background-color: #039dc4;
-  }
   .post-location {
     grid-template-columns: 400px 200px;
     grid-gap: 50px;
@@ -692,9 +819,6 @@ footer {
   html {
     font-size: 11px;
   }
-  body {
-    background-color: #c403a7;
-  }
   .post-location {
     grid-template-areas: "post";
     grid-template-columns: 692px;
@@ -703,8 +827,6 @@ footer {
   }
   .location {
     display: none;
-  }
-  .posts {
   }
   .cards {
     width: 400px;
@@ -728,9 +850,7 @@ footer {
   html {
     font-size: 10px;
   }
-  body {
-    background-color: #dbe303;
-  }
+
   .post-location {
     grid-template-areas: "post";
     grid-template-columns: 692px;
@@ -744,8 +864,7 @@ footer {
     width: 400px;
     height: 350px;
   }
-  .cards.last {
-  }
+
   .input-group {
     width: 200px;
   }
@@ -761,9 +880,7 @@ footer {
   html {
     font-size: 10px;
   }
-  body {
-    background-color: #e30303;
-  }
+
   .nav-section {
     display: none;
   }
@@ -824,14 +941,11 @@ footer {
   .write-btn {
     display: block;
   }
+  .mobile-mail-box {
+    display: block;
+  }
 }
 @media only screen and (max-width: 450px) {
-  html {
-    font-size: 9;
-  }
-  body {
-    background-color: #6003c4;
-  }
   .post-location {
     grid-template-areas: "post";
     grid-template-columns: 350px;
@@ -842,4 +956,16 @@ footer {
     width: 350px;
     height: 310px;
   }
+  .mobile-mail-box {
+    display: block;
+  }
+  .mail-box {
+    display: none;
+  }
+  .write-btn {
+    display: block;
+  }
+}
+
+.mail-box.box-shodow {
 }
