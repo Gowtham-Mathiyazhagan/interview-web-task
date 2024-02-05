@@ -33,10 +33,20 @@
             aria-describedby="addon-wrapping"
           />
         </div>
-        <div class="login">
-          <span>Create account.</span><span>It’s free!</span
-          ><i class="bi bi-caret-down-fill"></i>
+        <div class="login" id="login">
+          <span class="span-first">Create account.</span><span class="span-two">It&#96;s free!</span>
+          <i class="bi bi-caret-down-fill"></i>
+          <ul id="ul">
+            <li id="ul-first">Create Account</li>
+            <li id="ul-second">Sign In</li>
+          </ul>
         </div>
+      </div>
+      <!-- Mobile nav -->
+      <div class="mobile-nav">
+        <div>
+          <img src="./assets/Mobile nav.svg" alt="logo">
+      </div>
       </div>
       <!-- section2 for Title with image -->
       <div class="title-img">
@@ -51,6 +61,11 @@
           <h1>Computer Engineering</h1>
           <p>142,765 Computer Engineers follow this</p>
         </div>
+      </div>
+      <!-- Mobile Img style -->
+      <div class="moblie-join">
+        <i class="bi bi-arrow-left-short"></i>
+        <button>Join Group</button>
       </div>
       <!-- section3 for post and nav and location  -->
       <div class="post-section">
@@ -73,6 +88,14 @@
               Join Group
             </button>
           </div>
+        </div>
+        <!-- Nav mobile post -->
+        <div class="nav-mobile-post">
+          <div class="all-post">Posts(368)</div>
+          <button>
+            Filter All:
+            <i class="bi bi-caret-down-fill"></i>
+          </button>
         </div>
         <!-- grid layout used -->
         <!-- section2 for posts  -->
@@ -210,14 +233,16 @@
           </div>
         </div>
         <!-- section4 for footer  -->
-        <footer></footer>
+        <footer><i className="bi bi-c-circle"></i>Designed & Developed By Gowtham-Mathiyazhagan</footer>
       </div>
+
       <!-- Create Account -->
-      <div class="mail-box">
+      <div class="mail-box"  id="create" >
         <div class="green-letter">
           Let's learn, share & inspire each other with our passion for
-          computer engineering. Sign up now 🤘🏼
+          computer engineering. Sign up now 🤘🏼 
         </div>
+        <i class="bi bi-x-circle-fill" onclick="closeBox()"></i>
         <div class="main-grid-layout">
         <div class="create-account">
           <h3>Create Account</h3>
@@ -228,11 +253,11 @@
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <input type="text" placeholder="Create Password" />
-          <button>Create Account</button>
+          <button class="create-btn">Create Account</button>
     <div class="fb">
       <button><img src="./assets/fb icon.svg" alt="fb">Sign up with Facebook</button>
     </div>
-    <div class="fb">
+    <div class="google">
       <button><img src="./assets/google icon.svg" alt="google">Sign up with Google</button>
     </div>
         </div>
@@ -243,6 +268,38 @@
     </div>
   </div>
       </div>
+      <!-- Login Account -->
+      <div class="mail-box sign-in" id="signin">
+        <div class="green-letter">
+          Let's learn, share & inspire each other with our passion for
+          computer engineering. Sign up now 🤘🏼 
+        </div>
+        <i class="bi bi-x-circle-fill" onclick="closeBox()"></i>
+        <div class="main-grid-layout">
+        <div class="create-account sign-in">
+          <h3>Sign In</h3>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button class="create-btn">Sign Up</button>
+    <div class="fb sign-in"">
+      <button><img src="./assets/fb icon.svg" alt="fb">Sign in with Facebook</button>
+    </div>
+    <div class="google">
+      <button><img src="./assets/google icon.svg" alt="google">Sign in with Google</button>
+    </div>
+    <div class="forget">Forgot Password?</div>
+        </div>
+    <div class="right-icon">
+    <div>Already have an account?<span>Sign In</span></div>
+    <img src="./assets/Group icon.svg" alt="group-icons">
+    </div>
+  </div>
+      </div>
+<div class="write-btn">
+  <button>
+    <i class="bi bi-pencil-fill"></i>
+  </button>
+</div>
     </div>
     <script src="script.js"></script>
     <script
